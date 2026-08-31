@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Show — Pitch Your Band to Phoenix Phamous</title>
+  <meta name="description" content="Pitch your rock, metal, punk, or tribute act to play a Phoenix Phamous night at The Blooze Bar in Phoenix, Arizona." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M18 2 6 18h7l-3 12L26 12h-8z' fill='%23a78bfa'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="boltGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#a78bfa" />
+              <stop offset="1" stop-color="#f97316" />
+            </linearGradient>
+          </defs>
+          <path d="M18 2 6 18h7l-3 12L26 12h-8z" fill="url(#boltGrad)" />
+        </svg>
+        <span class="chrome">Phoenix Phamous</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle menu</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shows.html">Shows</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="btn btn--flame nav-cta" href="book.html" aria-current="page">Book a Show</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Pitch to play</p>
+        <h1>Book a Show</h1>
+        <p class="lead">
+          Phoenix Phamous books rock, metal, punk, and tribute acts into The Blooze Bar.
+          Fill this out and it opens an email to our booking team with everything in place.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="form-wrap">
+          <div>
+            <div class="error-summary" id="error-summary" tabindex="-1" role="alert" hidden>
+              <h2>Check these fields</h2>
+              <ul id="error-summary-list"></ul>
+            </div>
+
+            <form class="booking-form" id="booking-form" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="act">Act / band name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="act" name="act" autocomplete="organization" required />
+                  <p class="field-error" id="act-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="genre">Genre / style <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="genre" name="genre" placeholder="e.g. thrash, doom, glam tribute" required />
+                  <p class="field-error" id="genre-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="city">Home city <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="city" name="city" autocomplete="address-level2" required />
+                  <p class="field-error" id="city-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="email">Contact email <span class="req" aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required />
+                  <p class="field-error" id="email-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" />
+                  <p class="field-error" id="phone-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="links">Link to music / EPK <span class="req" aria-hidden="true">*</span></label>
+                  <input type="url" id="links" name="links" placeholder="https://" required />
+                  <p class="hint">Spotify, Bandcamp, YouTube, or a press kit page.</p>
+                  <p class="field-error" id="links-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="date">Preferred month or date</label>
+                  <input type="text" id="date" name="date" placeholder="e.g. October 2026, or a specific Friday" />
+                  <p class="field-error" id="date-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="draw">Typical local draw</label>
+                  <input type="text" id="draw" name="draw" placeholder="e.g. 40–60 people" />
+                  <p class="field-error" id="draw-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field full">
+                  <label for="message">About the act <span class="req" aria-hidden="true">*</span></label>
+                  <textarea id="message" name="message" required placeholder="Who you are, what you sound like, any past Phoenix shows, and what you're looking for."></textarea>
+                  <p class="field-error" id="message-error" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn--flame">Send the pitch</button>
+                <span class="fallback">Opens your email app · or write <a href="mailto:booking@phoenixphamous.com">booking@phoenixphamous.com</a></span>
+              </div>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <aside>
+            <h2 class="eyebrow" style="margin-bottom:20px;">What happens next</h2>
+            <ol class="steps">
+              <li>
+                <h3>We listen</h3>
+                <p>Every submission gets played. We reply within about two weeks, booked or not.</p>
+              </li>
+              <li>
+                <h3>We slot the date</h3>
+                <p>If it's a fit, we offer a date and a bill, and confirm set length and load-in.</p>
+              </li>
+              <li>
+                <h3>We promote it</h3>
+                <p>Custom poster art, socials, and mailing list. You get assets to share too.</p>
+              </li>
+              <li>
+                <h3>You play the Blooze</h3>
+                <p>Backline is shared, doors at 7, sound handled. Split is discussed up front.</p>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <path d="M18 2 6 18h7l-3 12L26 12h-8z" fill="#a78bfa" />
+            </svg>
+            <span class="chrome">Phoenix Phamous</span>
+          </a>
+          <p>Independent live-music booking for The Blooze Bar, 12014 N 32nd St, Phoenix, AZ 85028.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="shows.html">Shows</a></li>
+            <li><a href="book.html">Book a Show</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="mailto:info@phoenixphamous.com">info@phoenixphamous.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="mailto:booking@phoenixphamous.com">Booking inquiries</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Phoenix Phamous. All shows 21+.</span>
+        <span>Sample site — event details for demonstration.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
